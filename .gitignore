@@ -1,0 +1,13 @@
+# Word temporary files
+~$*.docx
+~$*.doc
+~$*
+
+# Python cache / virtual envs
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.idea/
+.vscode/

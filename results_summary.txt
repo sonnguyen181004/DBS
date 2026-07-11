@@ -1,0 +1,63 @@
+MODEL|ACC|PREC|REC|F1|AUC|TTRAIN|TTEST|NTRAIN
+SVM|0.875482|0.966371|0.753416|0.846709|0.973927|135.6810|382.9585|30000
+XGBoost|0.964562|0.952327|0.970966|0.961556|0.994303|0.5850|0.0352|148326
+LightGBM|0.959716|0.941208|0.972489|0.956593|0.994590|0.6674|0.0616|148326
+AdaBoost|0.950361|0.991298|0.899141|0.942973|0.985580|6.0564|0.3159|148326
+Random Forest|0.951331|0.944592|0.949040|0.946811|0.988842|2.0736|0.1444|148326
+
+===REPORTS===
+---SVM---
+              precision    recall  f1-score   support
+
+  Benign (0)     0.8253    0.9780    0.8952     25799
+    SQLi (1)     0.9664    0.7534    0.8467     21664
+
+    accuracy                         0.8755     47463
+   macro avg     0.8958    0.8657    0.8709     47463
+weighted avg     0.8897    0.8755    0.8730     47463
+
+---XGBoost---
+              precision    recall  f1-score   support
+
+  Benign (0)     0.9752    0.9592    0.9671     25799
+    SQLi (1)     0.9523    0.9710    0.9616     21664
+
+    accuracy                         0.9646     47463
+   macro avg     0.9638    0.9651    0.9643     47463
+weighted avg     0.9648    0.9646    0.9646     47463
+
+---LightGBM---
+              precision    recall  f1-score   support
+
+  Benign (0)     0.9762    0.9490    0.9624     25799
+    SQLi (1)     0.9412    0.9725    0.9566     21664
+
+    accuracy                         0.9597     47463
+   macro avg     0.9587    0.9607    0.9595     47463
+weighted avg     0.9602    0.9597    0.9598     47463
+
+---AdaBoost---
+              precision    recall  f1-score   support
+
+  Benign (0)     0.9214    0.9934    0.9561     25799
+    SQLi (1)     0.9913    0.8991    0.9430     21664
+
+    accuracy                         0.9504     47463
+   macro avg     0.9564    0.9463    0.9495     47463
+weighted avg     0.9533    0.9504    0.9501     47463
+
+---Random Forest---
+              precision    recall  f1-score   support
+
+  Benign (0)     0.9570    0.9533    0.9551     25799
+    SQLi (1)     0.9446    0.9490    0.9468     21664
+
+    accuracy                         0.9513     47463
+   macro avg     0.9508    0.9511    0.9510     47463
+weighted avg     0.9514    0.9513    0.9513     47463
+
+CM_SVM|TN=25231|FP=568|FN=5342|TP=16322
+CM_XGBoost|TN=24746|FP=1053|FN=629|TP=21035
+CM_LightGBM|TN=24483|FP=1316|FN=596|TP=21068
+CM_AdaBoost|TN=25628|FP=171|FN=2185|TP=19479
+CM_Random Forest|TN=24593|FP=1206|FN=1104|TP=20560
